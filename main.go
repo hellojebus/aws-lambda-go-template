@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -11,7 +12,7 @@ var rnd *renderer.Render
 
 func init() {
 	opts := renderer.Options{
-		ParseGlobPattern: "./tpl/*.html",
+		ParseGlobPattern: "tpl/*.html",
 	}
 	rnd = renderer.New(opts)
 }
@@ -26,9 +27,11 @@ func main() {
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
-	rnd.HTML(w, http.StatusOK, "Home", nil)
+	fmt.Println("home triggered")
+	rnd.HTML(w, http.StatusOK, "home", nil)
 }
 
 func about(w http.ResponseWriter, r *http.Request) {
-	rnd.HTML(w, http.StatusOK, "About", nil)
+	fmt.Println("about triggered")
+	rnd.HTML(w, http.StatusOK, "about", nil)
 }
