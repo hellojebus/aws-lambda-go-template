@@ -6,7 +6,7 @@ TEMPLATE = template.yaml
 
 .PHONY: test
 test:
-	go test ./...
+	go test ./... && echo "make_ok" || echo "test failed"
 
 .PHONY: clean
 clean:
