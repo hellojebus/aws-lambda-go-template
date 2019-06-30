@@ -14,7 +14,8 @@ clean:
 
 .PHONY: install
 install:
-	go get ./...
+	go get -d ./...
+	go get -t ./...
 
 main: ./src/main.go
 	go build -o $(OUTPUT) ./src/main.go
