@@ -4,7 +4,7 @@ This is a basic starting point for deploying an AWS Lambda function in Go. It us
 
 ## Requirements
 
-- [GO Lang](https://golang.org/doc/install)
+- [Go Lang](https://golang.org/doc/install)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 - Proper `aws configure` settings that will allow you to connect to AWS Lambda, S3, IAM, and CloudFormation  
