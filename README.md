@@ -9,9 +9,19 @@ You can either fork or use as template through Github.
 - [Go Lang](https://golang.org/doc/install)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
-- Proper `aws configure` settings that will allow you to connect to AWS Lambda, S3, IAM, and CloudFormation  
+- Proper `aws configure` settings that will allow you to connect to AWS Lambda, S3, IAM, and CloudFormation
 
-## Instructions
+## Getting started
+
+First, make sure you have all the required CLI tools installed!
+
+Begin by installing all go dependencies, run: `make install`
+
+Once all dependencies are installed, you can start the API by running: `make api`. Visit `http://127.0.0.1:3000/` in your browser to see your Lambda execution! 
+
+Finally, update `main.go` to fit your needs! 
+
+## Included commands
 
 Most of the commands have been extracted into a make file. To run any of the the following commands type `make COMMAND_GOES_HERE`
 
@@ -24,7 +34,8 @@ List of commands:
 - `api` - starts local API using Docker environment provided by `SAM CLI` (runs `build`)
 - `package` - uses `sam-cli` to create `packaged.yaml` file for CloudFormation. (Runs `test` and `build` before)
 - `deploy` -  uses `sam-cli` to deploy the app on AWS (Runs `test` and `package`)
-- `clean` -  cleans up app by removing old `packaged.yaml` file.
+- `clean` -  cleans up app by removing old `packaged.yaml` file. 
+
 
 ## Deploying
 
