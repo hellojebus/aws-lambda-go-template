@@ -1,15 +1,15 @@
-#Lambda Go Template
+# Go Lambda workflow for AWS
 
 This is a basic starting point for deploying an AWS Lambda function in Go. It uses AWS Lambda, S3, and Cloudformation for automating storage and deployment of lambda functions written in go.   
 
-##Requirements
+## Requirements
 
 - [GO Lang](https://golang.org/doc/install)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 - Proper `aws configure` settings that will allow you to connect to AWS Lambda, S3, IAM, and CloudFormation  
 
-##Instructions
+## Instructions
 
 Most of the commands have been extracted into a make file. To run any of the the following commands type `make COMMAND_GOES_HERE`
 
