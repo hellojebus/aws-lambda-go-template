@@ -24,3 +24,8 @@ List of commands:
 - `deploy` -  uses `sam-cli` to deploy the app on AWS (Runs `test` and `package`)
 - `clean` -  cleans up app by removing old `packaged.yaml` file.
 
+## Deploying
+
+In order to run the `make deploy` command successfully, you will need to supply the `S3_BUCKET` and `STACK_NAME` variables. Example usage below:
+
+`S3_BUCKET=YOUR_BUCKET_NAME STACK_NAME=YOUR_STACK_NAME make deploy`
