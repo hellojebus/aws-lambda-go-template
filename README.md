@@ -1,6 +1,6 @@
 # Go Lambda workflow for AWS
 
-This is a basic starting point for deploying an AWS Lambda function in Go. It uses AWS Lambda, S3, and Cloudformation for automating storage and deployment of lambda functions written in go.   
+This is a basic template repo for deploying an AWS Lambda function in Go. It uses AWS Lambda, S3, and Cloudformation for automating storage and deployment of lambda functions written in go.   
 
 ## Requirements
 
