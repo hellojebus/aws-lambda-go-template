@@ -6,7 +6,7 @@ TEMPLATE = template.yaml
 
 .PHONY: test
 test:
-	go test ./... && echo "make_ok" || echo "test failed"
+	go test ./...
 
 .PHONY: clean
 clean:
@@ -33,9 +33,9 @@ api: build
 	sam local start-api
 
 .PHONY: package
-package: build
+package: test build
 	sam package --template-file $(TEMPLATE) --s3-bucket $(S3_BUCKET) --output-template-file $(PACKAGED_TEMPLATE)
 
 .PHONY: deploy
-deploy: package
+deploy: test package
 	sam deploy --stack-name $(STACK_NAME) --template-file $(PACKAGED_TEMPLATE) --capabilities CAPABILITY_IAM

@@ -14,7 +14,7 @@ type body struct {
 
 func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	log.Println("Lambda Request", request.RequestContext.RequestID)
-	b, _ := json.Marshal(body{Message: "hellojebus2"})
+	b, _ := json.Marshal(body{Message: "hellojebus"})
 	return events.APIGatewayProxyResponse{
 		Body: string(b),
 		StatusCode: 200,
